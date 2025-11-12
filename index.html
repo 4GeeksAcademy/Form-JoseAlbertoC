@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Esta es la card -->
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="d-flex justify-content-start">Payment form example</h5>
+                    </div>
+
+                    <!-- Esta es la alarma -->
+                    <div class="alert alert-danger mt-3 ms-3 me-3 d-flex justify-content-start" role="alert">
+                        Some fields are missing
+                    </div>
+
+                    <form id="paymentform">
+                        <!-- Esta es la primera fila -->
+                        <div class=" row g-2 g-md-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Card
+                                    #</label>
+                                <input type="number" class="form-control ms-3" placeholder="XXXXXXXXXXXXXXXXX"
+                                    maxlength="16" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">CVC
+                                    #</label>
+                                <input type="text" class="form-control ms-3" placeholder="000" maxlength="3" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label
+                                    class="form-label fw-semibold small d-flex justify-content-start ms-3">Amount</label>
+                                <div class="input-group  me-3">
+                                    <span>$</span>
+                                    <input type="text" class="form-control " placeholder="Amount" required>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Esta es la 2 fila -->
+                        <div class=" row g-2 g-md-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">First
+                                    Name</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Last
+                                    Name</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                        </div>
+                        <!-- Tercera fila -->
+                        <div class=" row g-2 g-md-3 mb-3">
+                            <div class="col-md-6">
+                                <label
+                                    class="form-label fw-semibold small d-flex justify-content-start ms-3">City</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label
+                                    class="form-label fw-semibold small d-flex justify-content-start ms-3">State</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Postal
+                                    code</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                        </div>
+                        <!-- Cuarta fila -->
+
+                        <div class=" row g-2 g-md-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">We
+                                    accept:</label>
+                                <input type="text" class="form-control ms-3" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label
+                                    class="form-label fw-semibold small d-flex justify-content-start ms-3">Message</label>
+                                <div class="card">
+
+                                    <textarea class="form-control" id="postCaption" rows="3" "></textarea>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+
+                    <div class=" card-footer text-body-secondary">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
