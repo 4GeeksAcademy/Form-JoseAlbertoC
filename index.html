@@ -43,18 +43,18 @@
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Card
                                     #</label>
-                                <input type="number" class="form-control ms-3" placeholder="XXXXXXXXXXXXXXXXX"
+                                <input type="number" class="form-control ms-2" placeholder="XXXXXXXXXXXXXXXXX"
                                     maxlength="16" required>
                             </div>
                             <div class="col-md-2">
                                 <label class="form-label fw-semibold small d-flex justify-content-start ms-3">CVC
                                     #</label>
-                                <input type="text" class="form-control ms-3" placeholder="000" maxlength="3" required>
+                                <input type="text" class="form-control me-3" placeholder="000" maxlength="3" required>
                             </div>
                             <div class="col-md-4">
                                 <label
                                     class="form-label fw-semibold small d-flex justify-content-start ms-3">Amount</label>
-                                <div class="input-group  me-3">
+                                <div class="input-group  me-2">
                                     <span>$</span>
                                     <input type="text" class="form-control " placeholder="Amount" required>
 
@@ -65,14 +65,15 @@
                         <!-- Esta es la 2 fila -->
                         <div class=" row g-2 g-md-3 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">First
+                                <label
+                                    class="form-label fw-semibold small d-flex justify-content-start ms-3 required">First
                                     Name</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <input type="text" class="form-control  px-2 ms-2" id="firstName required">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Last
                                     Name</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <input type="text" class="form-control px-2 me-2" id="firstName">
                             </div>
                         </div>
                         <!-- Tercera fila -->
@@ -80,35 +81,66 @@
                             <div class="col-md-6">
                                 <label
                                     class="form-label fw-semibold small d-flex justify-content-start ms-3">City</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <input type="text" class="form-control ms-2" required>
                             </div>
                             <div class="col-md-3">
                                 <label
                                     class="form-label fw-semibold small d-flex justify-content-start ms-3">State</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <input type="text" class="form-control me-2" required>
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Postal
                                     code</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <input type="text" class="form-control  " required>
                             </div>
                         </div>
                         <!-- Cuarta fila -->
 
                         <div class=" row g-2 g-md-3 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label fw-semibold small d-flex justify-content-start ms-3">We
-                                    accept:</label>
-                                <input type="text" class="form-control ms-3" required>
+                                <div class="d-flex flex-column align-items-start">
+                                    <label class="form-label fw-semibold small ms-3 mb-2">We accept:</label>
+
+                                    <!-- Contenedor horizontal de radios -->
+                                    <div class="bg-dark text-white rounded p-2 ms-3 d-flex justify-content-start gap-3"
+                                        style="width: fit-content;">
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1"><i
+                                                    class="fa-brands fa-cc-mastercard"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2"><i
+                                                    class="fa-brands fa-cc-visa"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3">
+                                            <label class="form-check-label" for="inlineRadio3"><i
+                                                    class="fa-brands fa-cc-diners-club"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3">
+                                            <label class="form-check-label" for="inlineRadio3"><i
+                                                    class="fa-brands fa-cc-discover"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="col-md-6">
                                 <label
                                     class="form-label fw-semibold small d-flex justify-content-start ms-3">Message</label>
-                                <div class="card">
+                                <div class="card me-2">
 
                                     <textarea class="form-control" id="postCaption" rows="3" "></textarea>
 
                                 </div>
+                                <p class=" text-muted small mb-0 d-flex justify-content-start">Add any notes here</p>
                             </div>
 
                         </div>
@@ -116,9 +148,13 @@
 
                     </form>
 
-
+                        <!-- Esto es el footer -->
                     <div class=" card-footer text-body-secondary">
-                        2 days ago
+
+                        <div class="d-flex justify-content-end m-2 gap-2">
+                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
