@@ -19,6 +19,9 @@
         body {
             background-color: black;
         }
+        d-none{
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -33,11 +36,12 @@
                     </div>
 
                     <!-- Esta es la alarma -->
-                    <div class="alert alert-danger mt-3 ms-3 me-3 d-flex justify-content-start" role="alert">
+                    <div id="aler" class="alert alert-danger mt-3 ms-3 me-3 d-flex justify-content-start" role="alert">
                         Some fields are missing
                     </div>
 
-                    <form id="paymentform">
+                    <!-- Esto es el formulario -->
+                    <form id="paymentform" class="needs-validation" novalidate>
                         <!-- Esta es la primera fila -->
                         <div class=" row g-2 g-md-3 mb-3">
                             <div class="col-md-6 px-3">
@@ -68,12 +72,12 @@
                                 <label
                                     class="form-label fw-semibold small d-flex justify-content-start ms-3 required">First
                                     Name</label>
-                                <input type="text" class="form-control  px-2 ms-2" id="firstName required">
+                                <input type="text" class="form-control  px-2 ms-2" id="firstName required" required>
                             </div>
                             <div class="col-md-6 px-3">
                                 <label class="form-label fw-semibold small d-flex justify-content-start ms-3">Last
                                     Name</label>
-                                <input type="text" class="form-control px-2 me-3" id="firstName">
+                                <input type="text" class="form-control px-2 me-3" id="firstName" required>
                             </div>
                         </div>
                         <!-- Tercera fila -->
@@ -106,7 +110,7 @@
                                         style="width: fit-content;">
                                         <div class="form-check form-check-inline m-0">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
+                                                id="inlineRadio1" value="option1" required>
                                             <label class="form-check-label" for="inlineRadio1"><i
                                                     class="fa-brands fa-cc-mastercard"></i></label>
                                         </div>
@@ -145,22 +149,58 @@
 
                         </div>
 
-
-                    </form>
-
-                        <!-- Esto es el footer -->
-                    <div class=" card-footer text-body-secondary">
-
+                        
+                        <div class=" card-footer text-body-secondary">
+                        
                         <div class="d-flex justify-content-end m-2 gap-2">
                             <button type="submit" class="btn btn-secondary">Cancel</button>
                             <button type="submit" class="btn btn-primary">Send</button>
                             
                         </div>
                     </div>
+
+                    </form>
+
+                       
+                  
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+            const aler = document.getElementById("aler")
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        if (aler) {
+                            aler.classList.remove("d-none")
+                        } else {
+                            aler.classList.add("d-none")
+
+                        }
+
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                form.addEventListener("input", () => {
+                    if (aler) {
+                        aler.classList.add("d-none")
+                    }
+                })
+            })
+        })()
+    </script>
 </body>
 
 </html>
